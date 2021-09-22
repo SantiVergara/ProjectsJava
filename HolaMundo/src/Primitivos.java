@@ -29,8 +29,13 @@ public class Primitivos {
         System.out.println("valor máximo de un long: " + Long.MAX_VALUE);
         System.out.println("valor mínimo de un long: " + Long.MIN_VALUE);
 
-        var numeroVar = 9223372036854743599999999999999999999999999D;
-
+        double numeroDouble = 9223372036854743599999999999999999999999999D;
+        System.out.println("numeroVar = " + numeroDouble);
+        System.out.println("tipo double corresponde en byte a " + Double.BYTES);
+        System.out.println("tipo double corresponde en bits a " + Double.SIZE);
+        System.out.println("valor máximo de un double: " + Double.MAX_VALUE);
+        System.out.println("valor mínimo de un double: " + Double.MIN_VALUE);
+        
 
     }
 }
