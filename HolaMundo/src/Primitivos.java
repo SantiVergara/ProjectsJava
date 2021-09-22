@@ -35,7 +35,8 @@ public class Primitivos {
         System.out.println("tipo double corresponde en bits a " + Double.SIZE);
         System.out.println("valor máximo de un double: " + Double.MAX_VALUE);
         System.out.println("valor mínimo de un double: " + Double.MIN_VALUE);
-        
+
+        // Prueba
 
     }
 }
