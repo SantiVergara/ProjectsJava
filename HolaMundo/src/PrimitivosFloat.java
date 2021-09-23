@@ -19,6 +19,7 @@ public class PrimitivosFloat {
     System.out.println("realDouble = " + varFlotante);
 
     //Prueba desde DELL
+    //Prueba desde ASUS
 
   }
 }
