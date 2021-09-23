@@ -16,5 +16,7 @@ public class PrimitivosBoolean {
     boolean esIgual = 3-3 ==1;
     System.out.println("esIgual = " + esIgual);
 
+    //Prueba comentario para enviar desde ASUS a Git
+
   }
 }
