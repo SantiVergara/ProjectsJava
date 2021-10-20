@@ -1,38 +1,26 @@
 import java.util.Scanner;
 
-public class DetalleFactura {
+public class DetalleDeFactura {
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
 
-    String productDesc = " ";
-    int cantidad = 0;
+    System.out.println("Ingrese un nombre para la factura:");
+    String nombre = scanner.nextLine();
 
-    var scanner = new Scanner(System.in);
-    System.out.println("Ingrese descripción del producto ");
-    try {
-      productDesc = scanner.nextLine();
+    System.out.println("Ingrese un precio de producto:");
+    double precio1 = scanner.nextDouble();
 
-      System.out.println("Ingrese cantidad del producto ");
-      cantidad = scanner.nextInt();
-    }catch (Exception e){
-      System.out.println("Ingrese un valor correcto");
-      main(args);
-      System.exit(0);
-    }
+    System.out.println("Ingrese un segundo precio de producto:");
+    double precio2 = scanner.nextDouble();
 
-    String resumen = "Producto: " + productDesc + "\nCantidad: " + cantidad;
+    double totalBruto = precio1 + precio2;
+    double impuesto = totalBruto * 0.19;
+    double totalNeto = totalBruto + impuesto;
 
-    boolean aggNewProduct;
-    try {
-      System.out.println("¿Desea agregar otro Producto? (1 = Si ó 0 = No)");
-      aggNewProduct = scanner.nextBoolean();
-      if (aggNewProduct == true){
-        resumen += resumen;
-      }
-    }catch (Exception e){
-      System.out.println("Error al agregar nuevo Producto");
-    }
+    String detalle = "La factura " + nombre + " tiene un total bruto de " + totalBruto
+        + ", con un impuesto de " + impuesto
+        + " y el monto despues de impuesto es de " + totalNeto;
 
-    System.out.println("resumen = " + resumen);
-
+    System.out.println(detalle);
   }
 }
