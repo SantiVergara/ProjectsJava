@@ -1,35 +1,30 @@
-public class EjemploStringMetodos {
+public class EjemploStringMetodosArreglo {
   public static void main(String[] args) {
 
-    String nombre = "Santiago";
+    String trabalenguas = "trabalenguas";
+    System.out.println("trabalenguas.toCharArray() = " + trabalenguas.toCharArray());
 
-    System.out.println("nombre.length() = " + nombre.length());
-    System.out.println("nombre.toUpperCase() = " + nombre.toUpperCase());
-    System.out.println("nombre.toLowerCase() = " + nombre.toLowerCase());
-    System.out.println("nombre.equals(\"Santiago\") = " + nombre.equals("Santiago"));
-    System.out.println("nombre.equals(\"Santiago\") = " + nombre.equals("santiago"));
-    System.out.println("nombre.equals(\"Santiago\") = " + nombre.equalsIgnoreCase("santiago"));
-    System.out.println("nombre.compareTo(\"Andres\") = " + nombre.compareTo("Santiago"));
-    System.out.println("nombre.equals(\"Santiago\") = " + nombre.compareTo("Andres"));
-    System.out.println("nombre.equals(\"Santiago\") = " + nombre.charAt(0));
-    System.out.println("nombre.equals(\"Santiago\") = " + nombre.charAt(1));
-    System.out.println("nombre.charAt(nombre.length()-1) = " + nombre.charAt(nombre.length()-1));
+    char[] arreglo = trabalenguas.toCharArray();
+    int largo = arreglo.length;
+    System.out.println("largo = " + largo);
+    for (int i = 0; i < largo; i++) {
+      System.out.print(arreglo[i]);
+    }
+    System.out.println();
+    System.out.println("\ntrabalenguas = " + trabalenguas.split("a"));
 
-    System.out.println("nombre.substring(6) = " + nombre.substring(6));
-    System.out.println("nombre.substring(6) = " + nombre.substring(1, 4));
-    System.out.println("nombre.substring(nombre.length()-2) = " + nombre.substring(nombre.length()-2));
+    String [] arreglo2 = trabalenguas.split("a");
+    int l = arreglo2.length;
+    for (int j = 0; j < l; j++) {
+      System.out.println(arreglo2[j]);
+    }
 
-    String trabalengua = "trabalenguas";
-    System.out.println("trabalengua.replace(\"a\", \"e\") = " + trabalengua.replace("a", "."));
-    System.out.println("trabalengua = " + trabalengua);
-    System.out.println("trabalengua.indexOf(\"a\") = " + trabalengua.indexOf('a'));
-    System.out.println("trabalengua.lastIndexOf(\"a\") = " + trabalengua.lastIndexOf("a"));
-    System.out.println("trabalengua.indexOf('t') = " + trabalengua.indexOf("lenguas"));
-    System.out.println("trabalengua.contains(\"lenguas\") = " + trabalengua.contains("lenguas"));
-    System.out.println("trabalengua.startsWith(\"tr\") = " + trabalengua.startsWith("tr"));
-    System.out.println("trabalengua.endsWith(\"lenguas\") = " + trabalengua.endsWith("s"));
-    System.out.println("  trabalenguas ");
-    System.out.println("  trabalenguas ".trim());
-
+    String archivo = "alguna.imagen.pdf";
+    String [] archivoArr = archivo.split("\\."); // [.]
+    l = archivoArr.length;
+    for (int j = 0; j < l; j++) {
+      System.out.println(archivoArr[j]);
+    }
+    System.out.println("extension = " + archivoArr[l-1]);
   }
 }

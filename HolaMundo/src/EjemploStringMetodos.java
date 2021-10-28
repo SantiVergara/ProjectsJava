@@ -19,5 +19,17 @@ public class EjemploStringMetodos {
     System.out.println("nombre.substring(6) = " + nombre.substring(1, 4));
     System.out.println("nombre.substring(nombre.length()-2) = " + nombre.substring(nombre.length()-2));
 
+    String trabalengua = "trabalenguas";
+    System.out.println("trabalengua.replace(\"a\", \"e\") = " + trabalengua.replace("a", "."));
+    System.out.println("trabalengua = " + trabalengua);
+    System.out.println("trabalengua.indexOf(\"a\") = " + trabalengua.indexOf('a'));
+    System.out.println("trabalengua.lastIndexOf(\"a\") = " + trabalengua.lastIndexOf("a"));
+    System.out.println("trabalengua.indexOf('t') = " + trabalengua.indexOf("lenguas"));
+    System.out.println("trabalengua.contains(\"lenguas\") = " + trabalengua.contains("lenguas"));
+    System.out.println("trabalengua.startsWith(\"tr\") = " + trabalengua.startsWith("tr"));
+    System.out.println("trabalengua.endsWith(\"lenguas\") = " + trabalengua.endsWith("s"));
+    System.out.println("  trabalenguas ");
+    System.out.println("  trabalenguas ".trim());
+
   }
 }
