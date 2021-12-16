@@ -1,28 +1,29 @@
 public class EjemploStringValidar {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
+        
+        String curso = null;
+        
+        boolean esNulo = curso == null;
 
-    String curso = null;
+        System.out.println("esNulo = " + esNulo);
 
-    boolean esNulo = curso == null;
+        if(esNulo) {
+            curso = "Programación Java";
+        }
 
-    System.out.println("esNulo = " + esNulo);
+        boolean esVacio = curso.length() == 0;
 
-    if (esNulo) {
-      curso = "Programacion Java"; //" "; //Programacion Java";
+        System.out.println("esVacio = " + esVacio);
+
+        boolean esVacio2 = curso.isEmpty();
+        System.out.println("esVacio2 = " + esVacio2);
+
+        boolean esBlanco = curso.isBlank();
+        System.out.println("esBlanco = " + esBlanco);
+
+        if(esBlanco == false) {
+            System.out.println(curso.toUpperCase());
+            System.out.println("Bienvenido al curso ".concat(curso));
+        }
     }
-
-    boolean esVacio = curso.length()==0;
-    System.out.println("esVacio = " + esVacio);
-
-    boolean esVacio2 = curso.isEmpty();
-    System.out.println("esVacio2 = " + esVacio2);
-
-    boolean esBlanco = curso.isBlank();
-    System.out.println("esBlanco = " + esBlanco);
-
-    if (!esBlanco) {
-      System.out.println(curso.toUpperCase());
-      System.out.println("Bienvenidos al curso " .concat(curso));
-    }
-  }
 }
